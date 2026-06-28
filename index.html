@@ -12,7 +12,7 @@
   <meta name="geo.placename" content="Granada">
   <meta property="og:title" content="Reformas Cristian | Reformas, Pintura y Reparaciones en Granada, Málaga y Jaén">
   <meta property="og:description" content="Reformas, pintura, reparaciones y albañilería general en Granada, Málaga y Jaén. 20 años de experiencia. Presupuesto sin compromiso.">
-  <meta property="og:image" content="foto1.png">
+  <meta property="og:image" content="captura-2.png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Reformas Cristian">
@@ -23,7 +23,7 @@
     "@type": "LocalBusiness",
     "name": "Reformas Cristian",
     "description": "Reformas, pintura interior y exterior, reparaciones y albañilería en Granada, Málaga y Jaén.",
-    "image": "foto1.png",
+    "image": "captura-2.png",
     "telephone": "+34670757224",
     "address": {
       "@type": "PostalAddress",
@@ -50,9 +50,9 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     :root {
-      --color-primario: #1B2A4A;
-      --color-acento: #E8852A;
-      --color-fondo: #F8F6F3;
+      --color-primario: #1A1A1A;
+      --color-acento: #D4A843;
+      --color-fondo: #FAF8F5;
       --color-texto: #333333;
       --color-blanco: #ffffff;
       --font-titulos: 'Oswald', sans-serif;
@@ -112,7 +112,7 @@
       transition: all 0.4s ease;
     }
     .navbar.scrolled {
-      background: rgba(27,42,74,0.97);
+      background: rgba(26,26,26,0.97);
       backdrop-filter: blur(10px);
       padding: 0.8rem 2rem;
       box-shadow: 0 2px 30px rgba(0,0,0,0.3);
@@ -245,9 +245,9 @@
       inset: 0;
       background: linear-gradient(
         180deg,
-        rgba(27,42,74,0.6) 0%,
-        rgba(27,42,74,0.75) 50%,
-        rgba(27,42,74,0.92) 100%
+        rgba(26,26,26,0.6) 0%,
+        rgba(26,26,26,0.75) 50%,
+        rgba(26,26,26,0.92) 100%
       );
     }
     .hero__content {
@@ -267,8 +267,8 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(232,133,42,0.15);
-      border: 1px solid rgba(232,133,42,0.3);
+      background: rgba(212,168,67,0.15);
+      border: 1px solid rgba(212,168,67,0.3);
       padding: 0.5rem 1.2rem;
       border-radius: 50px;
       font-family: var(--font-titulos);
@@ -325,7 +325,7 @@
       background: var(--color-blanco);
       color: var(--color-primario);
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(232,133,42,0.3);
+      box-shadow: 0 8px 25px rgba(212,168,67,0.3);
     }
     .btn--outline {
       background: transparent;
@@ -374,6 +374,7 @@
     .sobre-nosotros {
       padding: 6rem 2rem;
       background: var(--color-fondo);
+      position: relative;
     }
     .sobre-nosotros__grid {
       max-width: 1200px;
@@ -385,17 +386,14 @@
     }
     .sobre-nosotros__img-wrap {
       position: relative;
-      margin-left: -3rem;
     }
     .sobre-nosotros__img-wrap img {
       border-radius: 6px;
       width: 100%;
       aspect-ratio: 4/3;
       object-fit: contain;
-      background: var(--color-fondo);
-      padding: 2.5rem;
-      transform: scale(1.8);
-      transform-origin: center;
+      background: #f0ebe0;
+      padding: 2rem;
     }
     .sobre-nosotros__img-accent {
       position: absolute;
@@ -479,7 +477,7 @@
       right: 0;
       width: 300px;
       height: 300px;
-      background: rgba(232,133,42,0.05);
+      background: rgba(212,168,67,0.05);
       border-radius: 50%;
       transform: translate(30%, -30%);
     }
@@ -553,23 +551,46 @@
        GALERÍA
     ═══════════════════════════════════════════════════ */
     .galeria {
-      padding: 6rem 2rem;
+      padding: 6rem 0;
       background: var(--color-fondo);
+      overflow: hidden;
     }
-    .galeria__grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 250px;
-      gap: 1rem;
+    .galeria .section-header {
+      padding: 0 2rem;
+    }
+    .galeria__row {
+      margin-bottom: 2rem;
+    }
+    .galeria__row-label {
+      font-family: var(--font-titulos);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      color: var(--color-acento);
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .galeria__track {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 40s linear infinite;
+    }
+    .galeria__row:nth-child(2) .galeria__track {
+      animation-direction: reverse;
+      animation-duration: 45s;
+    }
+    .galeria__track:hover {
+      animation-play-state: paused;
     }
     .galeria__item {
+      flex: 0 0 320px;
+      height: 240px;
       position: relative;
       overflow: hidden;
-      border-radius: 10px;
-      background: #f0f0f0;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      margin: 0 0.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     .galeria__item img {
       width: 100%;
@@ -577,26 +598,17 @@
       object-fit: cover;
       transition: transform 0.6s ease;
     }
-    .galeria__item:hover img { transform: scale(1.03); }
-    .galeria__frase {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      background: var(--color-primario);
-      border-radius: 10px;
-      grid-column: span 2;
+    .galeria__item:hover img { transform: scale(1.05); }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
-    .galeria__frase p {
-      font-family: var(--font-titulos);
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--color-blanco);
-      text-align: center;
-      line-height: 1.3;
-      letter-spacing: 0.02em;
+    @media (max-width: 768px) {
+      .galeria__item {
+        flex: 0 0 260px;
+        height: 190px;
+      }
     }
-    .galeria__frase span { color: var(--color-acento); }
 
     /* ═══════════════════════════════════════════════════
        FAQ
@@ -670,7 +682,7 @@
     .cta__overlay {
       position: absolute;
       inset: 0;
-      background: rgba(27,42,74,0.9);
+      background: rgba(26,26,26,0.9);
     }
     .cta__content {
       position: relative;
@@ -719,7 +731,7 @@
        FOOTER
     ═══════════════════════════════════════════════════ */
     .footer {
-      background: #111;
+      background: #0D0D0D;
       padding: 3rem 2rem 1.5rem;
     }
     .footer__inner {
@@ -820,23 +832,8 @@
       .navbar__links { display: none; }
       .navbar__hamburger { display: flex; }
       .sobre-nosotros__grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .galeria__grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 200px;
-        gap: 0.8rem;
-      }
-      .galeria__item { grid-column: span 1 !important; grid-row: span 1 !important; }
-      .galeria__frase { grid-column: span 2 !important; }
     }
     @media (max-width: 600px) {
-      .galeria__grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 220px;
-        gap: 0.8rem;
-      }
-      .galeria__item { grid-column: span 1 !important; grid-row: span 1 !important; }
-      .galeria__frase { grid-column: span 1 !important; padding: 1.5rem; }
-      .galeria__frase p { font-size: 1.2rem; }
       .servicios__grid { grid-template-columns: 1fr; }
       .footer__inner { flex-direction: column; text-align: center; }
       .cta__info { flex-direction: column; align-items: center; }
@@ -941,7 +938,14 @@
       <h2 class="section-title">Nuestro trabajo</h2>
       <p class="section-subtitle">Así quedan las cosas cuando las hace gente que sabe.</p>
     </div>
-    <div class="galeria__grid" id="galeria-grid"></div>
+    <div class="galeria__row">
+      <p class="galeria__row-label">Reformas y Exteriores</p>
+      <div class="galeria__track" id="galeria-exteriores"></div>
+    </div>
+    <div class="galeria__row">
+      <p class="galeria__row-label">Decoración de Interiores</p>
+      <div class="galeria__track" id="galeria-interiores"></div>
+    </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════
@@ -1027,13 +1031,13 @@
       mensajeWA:       "¡Hola! Quiero presupuesto para una reforma en Reformas Cristian",
 
       // ── COLORES ────────────────────────────────────────
-      colorPrimario:   "#1B2A4A",
-      colorAcento:     "#E8852A",
-      colorFondo:      "#F8F6F3",
+      colorPrimario:   "#1A1A1A",
+      colorAcento:     "#D4A843",
+      colorFondo:      "#FAF8F5",
 
       // ── IMÁGENES ───────────────────────────────────────
       logoUrl:              "logo.png",
-      imagenHero:           "foto1.png",
+      imagenHero:           "captura-2.png",
       imagenSobreNosotros:  "foto6.png",
 
       // ── SERVICIOS ──────────────────────────────────────
@@ -1045,14 +1049,24 @@
       ],
 
       // ── GALERÍA ────────────────────────────────────────
-      galeria: [
-        { src: "foto1.png", cols: 2, rows: 1 },
-        { src: "foto2.jpg", cols: 1, rows: 2 },
-        { src: "foto4.jpg", cols: 1, rows: 1 },
-        { src: "foto5.jpg", cols: 1, rows: 1 },
-        { src: "foto6.png", cols: 1, rows: 1 },
+      galeriaExteriores: [
+        "foto2.jpg",
+        "foto4.jpg",
+        "foto5.jpg",
+        "foto6.png",
+        "foto7.png",
+        "captura-1.png",
+        "captura-2.png",
       ],
-      fraseGaleria: "Cada obra es un proyecto nuevo. Tu espacio, a tu medida.",
+      galeriaInteriores: [
+        "interior-1.png",
+        "interior-2.png",
+        "interior-3.png",
+        "interior-4.png",
+        "interior-5.png",
+        "interior-6.png",
+        "interior-7.png",
+      ],
 
       // ── FAQ ────────────────────────────────────────────
       faq: [
@@ -1190,13 +1204,17 @@
     //  GALERÍA
     // ═══════════════════════════════════════════════════
 
-    const galeriaGrid = document.getElementById('galeria-grid');
-    const fraseHtml = `<div class="galeria__frase"><p>${CONFIG.fraseGaleria.replace('.', '<span>.</span>')}</p></div>`;
-    galeriaGrid.innerHTML = CONFIG.galeria.map((img, i) => `
-      <div class="galeria__item" data-aos="fade-up" data-aos-delay="${i * 80}" style="grid-column: span ${img.cols}; grid-row: span ${img.rows};">
-        <img src="${img.src}" alt="Obra ${i + 1} de ${CONFIG.nombreNegocio}" loading="lazy">
-      </div>
-    `).join('') + fraseHtml;
+    function renderTrack(containerId, images) {
+      const track = document.getElementById(containerId);
+      const items = images.map((src, i) => `
+        <div class="galeria__item">
+          <img src="${src}" alt="Obra de ${CONFIG.nombreNegocio}" loading="lazy">
+        </div>
+      `).join('');
+      track.innerHTML = items + items;
+    }
+    renderTrack('galeria-exteriores', CONFIG.galeriaExteriores);
+    renderTrack('galeria-interiores', CONFIG.galeriaInteriores);
 
     // ═══════════════════════════════════════════════════
     //  FAQ
